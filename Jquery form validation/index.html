@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Registration Form </title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css"/>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.structure.css"/>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.theme.css" />
+	
+	<script type="text/javascript" src="script.js"></script>
+
+	<style>
+table, td, th {
+    border: 1px solid black;
+    /*align-items: center;*/
+    text-align: center;
+    padding: 7px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td {
+    height: 50px;
+    vertical-align: bottom;
+}
+</style>
+</head>
+<body>
+	<!-- <h1> Registration Form </h1> -->
+	<form name="myform">
+		<table align="center">
+			<tr>
+				<td colspan="3" align="center">
+					Person Profile
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Name : 
+				</td>
+				<td>
+					<input type="txt" placeholder="ex: John kabir" name="" id="name">
+				</td>
+				<td id="ename">
+					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Email : 
+				</td>
+				<td>
+					<input type="Email" placeholder="john@exapmle.com" name="">
+				</td>
+				<td>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Gender : 
+				</td>
+				<td>
+					<input type="radio" name="Gender"> Male
+					<input type="radio" name="Gender"> Female
+					<input type="radio" name="Gender"> Other
+				</td>
+				<td>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Date of Birth : 
+				</td>
+				<td>
+					<input type="text" name="" id="date">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Blood Group : 
+				</td>
+				<td>
+					<input type="text" name="" id="auto">
+				</td>
+				<td>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Degree : 
+				</td>
+				<td>
+					<input type="checkbox" name="d1" value="Bike"> SSC 
+					<input type="checkbox" name="d2" value="Car"> HSC
+					<input type="checkbox" name="d3" value="Boat" > BSc.  
+					<input type="checkbox" name="d4" value="Bo" > MSc. 
+				</td>
+				<td>
+					
+				</td>
+			</tr>
+			<tr>
+				<td >
+					Photo : 
+				</td>
+				<td colspan="2">
+					<input type="file" name="">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<br>
+				</td>
+			</tr>
+			<tr>
+					<td colspan="3" align="right">
+						<input type="Submit" value="Submit" name="">
+						<input type="Reset" value="Reset" name="">
+					</td>
+				</tr>
+
+		</table>
+	</form>
+</body>
+</html>

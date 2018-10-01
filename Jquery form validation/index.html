@@ -4,11 +4,12 @@
 	<title> Registration Form </title>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="jquery-ui.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 	<link rel="stylesheet" type="text/css" href="jquery-ui.css"/>
 	<link rel="stylesheet" type="text/css" href="jquery-ui.structure.css"/>
 	<link rel="stylesheet" type="text/css" href="jquery-ui.theme.css" />
 	
-	<script type="text/javascript" src="script.js"></script>
+	<!-- <script type="text/javascript" src="script.js"></script> -->
 
 	<style>
 table, td, th {
@@ -43,10 +44,10 @@ td {
 					Name : 
 				</td>
 				<td>
-					<input type="txt" placeholder="ex: John kabir" name="" id="name">
+					<input type="txt" placeholder="ex: John kabir" name="" id="name" >
 				</td>
-				<td id="ename">
-					
+				<td>
+					<strong style="color: red" id="ename"></strong>
 				</td>
 			</tr>
 			<tr>
@@ -79,6 +80,9 @@ td {
 				</td>
 				<td>
 					<input type="text" name="" id="date">
+				</td>
+				<td>
+					
 				</td>
 			</tr>
 			<tr>
@@ -121,12 +125,16 @@ td {
 			</tr>
 			<tr>
 					<td colspan="3" align="right">
-						<input type="Submit" value="Submit" name="">
+						<input type="Submit" value="Submit" name="" id="sub">
 						<input type="Reset" value="Reset" name="">
 					</td>
 				</tr>
 
 		</table>
+
 	</form>
+	<div id="output">
+		
+	</div>
 </body>
 </html>

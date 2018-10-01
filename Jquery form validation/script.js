@@ -20,13 +20,29 @@ $(document).ready(function(){
 	 $('#date').datepicker();
 	// $('#auto').autocomplete();
 
-	$('name').on('keyup',function(){
-		var x = document.forms["myForm"]["name"].value;
-    	if (x == "") {
-    		$('ename').html("error")
-        // alert();
-	})
-	});
+	// $('name').on('keyup',function(){
+	// 	var x = document.forms["myForm"]["name"].value;
+ //    	if (x == "") {
+ //    		$('ename').html("error")
+ //        // alert();
+	// }
+	// })
+
+  $("#sub").on('click',function(e){
+
+    e.preventDefault(e);
+        // alert("The paragraph was clicked.");
+        var name = $('#name').val();
+        if(!name)
+        {
+          $('#ename').html("empty");
+        }
+        else {
+        $('#output').html(""+name);
+        $('#ename').html("");
+      }
+    });
+});
 
 
 

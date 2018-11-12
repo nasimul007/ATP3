@@ -34,7 +34,7 @@
 
 	}
 
-	$php 	= new Course('PHP');
+	/*$php 	= new Course('PHP');
 	$java 	= new Course('JAVA');
 	$c 		= new Course('C');
 
@@ -42,7 +42,9 @@
 	$php->addStudent('xyz');
 	$php->addStudent('efg');
 
+	
+
 	echo $php->allStudent();
 	echo "<br>";
 	$php->dropStudent('xyz');
-	echo $php->allStudent();
+	echo $php->allStudent();*/

@@ -13,8 +13,9 @@
 			$this->studentName = $studentName;
 		}
 
-		public function addCourse($courseName){
-			$this->courseList = $courseName;
+		public function addCourse($course){
+			$this->courseList = $course->courseName;
+			$course->addStudent($this->studentName);
 		}
 		public function dropCourse($courseName){
 			if (($key = array_search($courseName, $this->courseList)) !== false) {
@@ -35,8 +36,18 @@
 		}
 	}
 
+	$php 	= new Course('PHP');
+	$java 	= new Course('JAVA');
+	$c 		= new Course('C');
+
+	$php->addStudent('abc');
+	$php->addStudent('xyz');
+	$php->addStudent('efg');
+
 	$studentOne 	= new Student('Nirjon');
 	$studentTwo 	= new Student('Titly');
 	$studentThree 	= new Student('Shanto');
+
+	$studentOne->addCourse($php);
 
 	echo $studentOne->name();

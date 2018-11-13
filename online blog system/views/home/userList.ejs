@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>user List</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/search/jquery-ui.structure.css"/>
+	<link rel="stylesheet" type="text/css" href="/search/jquery-ui.css"/>
+	<script type="text/javascript" src="/search/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="/search/jquery-ui.theme.css"/>
+	<script type="text/javascript" src="/search/script.js"></script>
+</head>
+<body>
+	<h1>User List</h1>
+
+	<a href="/home">Back</a>
+	<input type="text" name="search" id="autocomplete" placeholder="search">
+	<form method="post">
+		
+		<table border="1">
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Contact Number</th>
+				<th>User Name</th>
+				<th>Type</th>
+			</tr>
+			<% for(var i = 0; i < userList.length; i++){ %>
+
+			<tr>
+				<td><%= userList[i].id %></td>
+				<td><%= userList[i].name %></td>
+				<td><%= userList[i].phone %></td>
+				<td><%= userList[i].username %></td>
+				<td><%= userList[i].type %></td>
+				<td><a href="/home/edit/<%= userList[i].id %>">Edit</a> | <a href="/home/delete/<%= userList[i].id %>"> Delete</a> </td>
+			</tr>
+			
+			<% } %>
+
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Posts</title>
+</head>
+<body>
+	<h1>Posts List</h1>
+
+	<a href="/home">Back</a>
+	<form action="/home/postList">
+		<table border="1">
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Post</th>
+			</tr>
+			<% for(var i = 0; i < postList.length; i++){ %>
+
+			<tr>
+				<td><%= postList[i].id %></td>
+				<td><%= postList[i].username %></td>
+				<td><%= postList[i].writing %></td>
+				<!-- <td><a href="/home/edit/<%= postList[i].id %>">Edit</a> | <a href="/home/delete/<%= postList[i].id %>"> Delete</a> </td> -->
+			</tr>
+			
+			<% } %>
+
+		</table>
+	</form>
+</body>
+</html>

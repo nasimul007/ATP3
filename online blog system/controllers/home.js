@@ -202,13 +202,10 @@ router.post('/createPost', function(request, response){
 });
 
 router.post('/search', function(request, response){
-	var term = request.body.term;
-	console.log(term);
+	var value = request.body.value;
+	// console.log(term);
 
-	response.writeHead(200, {'Content-Type': 'application/json'});
-	userModel.getSearch(term, function(result){
-		//response.send(result);
-		//return result;
+	userModel.getSearch(value, function(result){
 		response.end(JSON.stringify(result));
 	});
 });

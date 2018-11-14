@@ -3,25 +3,26 @@
 $(document).ready(function(){
 
     $("#autocomplete").autocomplete({
+        minLength: 1,
             source: function( request, response ) {  
                 $.ajax({  
                     url: "/home/search",
                     method: "POST",
                     dataType: "json",  
                     data: {  
-                        term: request.term  
+                        value: request.term  
                     },  
                     success: function( data ) {  
                         response( $.map( data, function( result ) {  
                             return {  
-                                label: "Name : "+result.username + "      " + " Id : " + result.id ,  
+                                label: " ID : " + result.id + " NAME : "+result.username ,    
                                 value: result.username
                             }  
                         }));  
                     }  
                 });  
-            },
-            minLength: 1
+            }
+            
         });
 
 });

@@ -21,10 +21,10 @@ module.exports = {
 			callback(result);
 		});
 	},
-	getSearch: function(term, callback){
-		console.log("Got value",term);
+	getSearch: function(value, callback){
+		console.log("Got value",value);
 		var sql = "SELECT * FROM blogs where username like ? or id like ?";
-		db.getResult(sql, ["%"+term+"%", "%"+term+"%"], function(result){
+		db.getResult(sql, ["%"+value+"%", "%"+value+"%"], function(result){
 			callback(result);
 		});
 	},

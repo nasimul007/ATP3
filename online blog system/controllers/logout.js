@@ -7,7 +7,7 @@ router.get('/', function(request, response){
 
 	request.session.un = "";
 	request.session.ty = "";
-	response.redirect('/login');
+	response.redirect('/');
 });
 
 
